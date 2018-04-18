@@ -27,13 +27,15 @@ class Votacion
 private:
     vector<Ciudadano> votantes;
     vector<Ciudadano> candidatos;
+    vector<Ciudadano> candidatosV2;
     vector<int> votosPrimeraVuelta;
     vector<int> votosSegundaVuelta;
     vector<int> yaVotoPrimera;
     vector<int> yaVotoSegunda;
+    vector<int> votosTotalPrimera;
+    vector<int> votosTotalSegunda;
     bool inscripcionesAbiertas;
     bool votacionesAbiertas =  false;
-    Ciudadano candidatosV2[2];
     int queVuelta=1;
 public:
     Votacion();
@@ -48,8 +50,11 @@ public:
     void cerrarOAbrirVotaciones();
     void realizarVotacion();
     int cedulaPorPosicion(int posicion);
+    int cedulaPorPosicion2(int posicion);
     void mostrarVotos();
     bool cedulaYaVoto(int cedula, int vuelta);
+    void finalizarVuelta();
+    void contarVotos(int vuelta);
 
 
 
