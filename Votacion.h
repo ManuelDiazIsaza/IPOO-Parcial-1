@@ -34,7 +34,7 @@ private:
     vector<int> yaVotoSegunda; // Cedulas que ya votaron en la segunda vuelta
     vector<int> votosTotalPrimera; // Votos totales por candidato en la primera vuelta
     vector<int> votosTotalSegunda; // Votos totales por candidato en la segunda vuelta
-    bool inscripcionesAbiertas; // Booleano que determina si las inscripciones estan abiertas o no
+    bool inscripcionesAbiertas = true; // Booleano que determina si las inscripciones estan abiertas o no
     bool votacionesAbiertas =  false; // Booleano que determina si las votaciones estan abiertas o no
     int queVuelta=1; // entero que determina en que vuelta de elecciones estamos
 public:

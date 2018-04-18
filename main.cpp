@@ -12,6 +12,9 @@
 // Responsabilidad: Inicializacion del programa
 // Colaboracion: Ninguna
 
+/*Este programa permite manejar las inscripciones de ciudadanos a una votacion presidencial, ademas de realizar como tal el
+proceso de votacion, tanto para primera como segunda vuelta y mostrar las estadisticas pertinentes.*/
+
 
 #include <iostream>
 #include "Votacion.h"

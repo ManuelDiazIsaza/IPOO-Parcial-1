@@ -59,7 +59,6 @@ void Votacion::interfazPrincipal()
     Ciudadano ciudadano17("Andres", 17, "Buenaventura", "Valle", "", 1);
     Ciudadano ciudadano18("Andrea", 18, "Barranquilla", "Atlantico", "", 1);
 
-
     votantes.push_back(ciudadanoUno);
     votantes.push_back(ciudadanoDos);
     votantes.push_back(ciudadanoTres);
@@ -95,6 +94,20 @@ void Votacion::interfazPrincipal()
     votosPrimeraVuelta.push_back(12);
     votosPrimeraVuelta.push_back(12);
 
+    votosSegundaVuelta.push_back(12);
+    votosSegundaVuelta.push_back(12);
+    votosSegundaVuelta.push_back(12);
+    votosSegundaVuelta.push_back(12);
+    votosSegundaVuelta.push_back(12);
+    votosSegundaVuelta.push_back(12);
+    votosSegundaVuelta.push_back(5);
+    votosSegundaVuelta.push_back(5);
+    votosSegundaVuelta.push_back(5);
+    votosSegundaVuelta.push_back(5);
+    votosSegundaVuelta.push_back(5);
+    votosSegundaVuelta.push_back(5);
+    votosSegundaVuelta.push_back(5);
+    votosSegundaVuelta.push_back(5);
 
     int opcion = 0;
     do
