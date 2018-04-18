@@ -333,12 +333,8 @@ void Votacion::realizarVotacion()
                 numero++;
             }
             cin >> opcion;
-
             votosPrimeraVuelta.push_back(cedulaPorPosicion(opcion));
             yaVotoPrimera.push_back(cedula);
-
-            //mostrarVotos();
-
         }
         else if(buscarCiudadano(cedula) && !cedulaYaVoto(cedula, 2) && queVuelta==2)
         {
@@ -351,7 +347,6 @@ void Votacion::realizarVotacion()
                 numero++;
             }
             cin >> opcion;
-
             votosSegundaVuelta.push_back(cedulaPorPosicion2(opcion));
             yaVotoSegunda.push_back(cedula);
         }
@@ -389,15 +384,6 @@ int Votacion::cedulaPorPosicion2(int posicion)
             return (*it).getCedula();
         }
         contador++;
-    }
-}
-
-void Votacion::mostrarVotos()
-{
-    vector<int>::iterator it;
-    for(it = votosPrimeraVuelta.begin(); it != votosPrimeraVuelta.end(); it++)
-    {
-            cout << *it;
     }
 }
 
@@ -459,23 +445,26 @@ void Votacion::finalizarVuelta()
             cout << endl;
         }
         cout<<endl<<endl;
-        if(!huboGanador) {
+        if(!huboGanador)
+        {
             cout << "Estas elecciones pasan a segunda vuelta." << endl;
 
             vector<Ciudadano> candiTemp = candidatos;
             vector<int> votosTemp = votosTotalPrimera;
             cout << "Los Candidatos que pasan a segunda vuelta son:" << endl;
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 2; i++)
+            {
                 int mayorTemporal = 0;
-                for (it2 = votosTemp.begin(); it2 != votosTemp.end(); it2++) {
+                for (it2 = votosTemp.begin(); it2 != votosTemp.end(); it2++)
+                {
                     if (*it2 > mayorTemporal) {
                         mayorTemporal = *it2;
                     }
                 }
-                //cout << mayorTemporal << endl;
                 vector<Ciudadano>::iterator it3 = candiTemp.begin();
                 int apunt = 0;
-                for (it2 = votosTemp.begin(); it2 != votosTemp.end(); it2++) {
+                for (it2 = votosTemp.begin(); it2 != votosTemp.end(); it2++)
+                {
                     if (*it2 == mayorTemporal)
                     {
                         candidatosV2.push_back(candiTemp.at(apunt));
@@ -488,13 +477,11 @@ void Votacion::finalizarVuelta()
                     }
                     apunt++;
                     it3++;
-
                 }
-
             }
         }
-        cout << endl << endl;
-    queVuelta = 2;
+            cout << endl << endl;
+            queVuelta = 2;
     }
     else
     {
@@ -510,7 +497,6 @@ void Votacion::finalizarVuelta()
             vector<Ciudadano>::iterator it;
             vector<int>::iterator it2;
             it2 = votosTotalSegunda.begin();
-            bool huboGanador;
             for(it = candidatosV2.begin(); it != candidatosV2.end(); it++)
             {
                 double porcentaje = (double)*it2/cantidadQueVotaron*100;
@@ -518,7 +504,6 @@ void Votacion::finalizarVuelta()
                 if(cantidadQueVotaron/2+1 <= *it2)
                 {
                     cout << " Este candidato es el nuevo presidente.";
-                    huboGanador = true;
                 }
                 it2++;
                 cout << endl;
@@ -526,7 +511,6 @@ void Votacion::finalizarVuelta()
             cout<<endl<<endl;
 
             cout << endl << endl;
-            queVuelta = 2;
     }
 
 }
@@ -546,7 +530,6 @@ void Votacion::contarVotos(int vuelta)
                     contadorVotos++;
             }
             votosTotalPrimera.push_back(contadorVotos);
-            //cout << "El Candidato " << (*it).getNombre() << " obtuvo " << contadorVotos << endl;
         }
     }
     else if (vuelta == 2)
@@ -562,11 +545,6 @@ void Votacion::contarVotos(int vuelta)
                     contadorVotos++;
             }
             votosTotalSegunda.push_back(contadorVotos);
-            cout << "El Candidato " << (*it).getNombre() << " obtuvo " << contadorVotos << endl;
         }
     }
 }
-
-
-
-

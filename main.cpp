@@ -19,7 +19,6 @@
 int main() {
 
     Votacion votaciones;
-
     votaciones.interfazPrincipal();
 
     return 0;

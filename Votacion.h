@@ -51,7 +51,6 @@ public:
     void realizarVotacion();
     int cedulaPorPosicion(int posicion);
     int cedulaPorPosicion2(int posicion);
-    void mostrarVotos();
     bool cedulaYaVoto(int cedula, int vuelta);
     void finalizarVuelta();
     void contarVotos(int vuelta);
