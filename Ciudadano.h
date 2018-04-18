@@ -50,3 +50,5 @@ public:
 };
 
 #endif //PARCIAL1_CIUDADANO_H
+
+

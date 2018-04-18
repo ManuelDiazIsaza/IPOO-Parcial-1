@@ -8,7 +8,7 @@
   Licencia: GPL
 */
 
-// Clase: Voto
+// Clase: Main
 // Responsabilidad: Inicializacion del programa
 // Colaboracion: Ninguna
 

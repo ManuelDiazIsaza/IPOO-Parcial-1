@@ -55,8 +55,6 @@ public:
     void finalizarVuelta(); // Finaliza una vuelta presidencial (La actual)
     void contarVotos(int vuelta); // Cuenta los votos de cierta vuelta que es el parametro de entrada
 
-
-
 };
 
 #endif //PARCIAL1_VOTACION_H
